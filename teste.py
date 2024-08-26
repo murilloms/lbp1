@@ -45,7 +45,6 @@ class Aluno(Pessoa):
         print(f"O aluno {self.GetNome()} de prontuário {self.__prontuario} na matéria {self.__materia} ficou com as seguintes médias:")
         print(f"Média: {}")
 
-# Exemplo de uso
 matematica = Materia("Matemática")
 notas_aluno = [[8.0, 7.5], [7.5, 8.0]]  # Exemplo de duas notas para o aluno
 aluno = Aluno("Maria", 20, "54321", notas_aluno, matematica)

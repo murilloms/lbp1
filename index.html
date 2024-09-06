@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário e Lista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Adicionar Item</h2>
+            <form id="itemForm">
+                <label for="campo1">Time:</label>
+                <input type="text" id="campo1" name="campo1" required>
+
+                <label for="campo2">País:</label>
+                <input type="text" id="campo2" name="campo2" required>
+
+                <label for="campo3">Campeonatos Nacionais:</label>
+                <input type="text" id="campo3" name="campo3" required>
+
+                <label for="campo4">Campeonatos Internacionais:</label>
+                <input type="text" id="campo4" name="campo4" required>
+
+                <button type="submit" class="btn-add">Adicionar</button>
+            </form>
+        </div>
+
+        <div class="table-section">
+            <h2>Lista de Itens</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>País</th>
+                        <th>Campeonatos Nacionais</th>
+                        <th>Campeonatos Internacionais</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList">
+                    <tr>
+                        {% for time in times %}
+                        <td>{{time.nome}}</td>
+                        <td>{{time  .nome}}</td>
+                        <td>{{time.nome}}</td>
+                        <td>{{time.nome}}</td>
+                        <td>
+                            <div class="actions">
+                                <a class="btn-edit" href=""><i class="fas fa-pencil-alt"></i></a>
+                                <a class="btn-delete" href=""><i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <!-- Linhas serão adicionadas aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
